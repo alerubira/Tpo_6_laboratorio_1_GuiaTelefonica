@@ -2,7 +2,7 @@
 
 <ClassDiagram name="GuiaTelefonica">
   <ClassDiagramComponents>
-    <Class name="Cliente" package="" visibility="public" xPosition="164.0" yPosition="108.0">
+    <Class name="Cliente" package="" visibility="public" xPosition="5.0" yPosition="36.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="apellido" type="String" visibility="private"/>
@@ -11,7 +11,13 @@
         <Field name="direccion" type="String" visibility="private"/>
       </Fields>
       <Constructors>
-        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="ciudad"/>
+          <Argument type="String" name="dni"/>
+          <Argument type="String" name="direccion"/>
+        </Constructor>
       </Constructors>
       <Methods>
         <Method name="getNombre" returnType="String" visibility="public"/>
@@ -19,16 +25,32 @@
         <Method name="getCiudad" returnType="String" visibility="public"/>
         <Method name="getDni" returnType="String" visibility="public"/>
         <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="setCiudad" returnType="void" visibility="public">
+          <Argument type="String" name="ciudad"/>
+        </Method>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="String" name="dni"/>
+        </Method>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
       </Methods>
     </Class>
-    <Class name="DirectorioTelefonico" package="" visibility="public" xPosition="534.0" yPosition="172.0">
+    <Class name="DirectorioTelefonico" package="" visibility="public" xPosition="678.0" yPosition="165.0">
       <Fields>
-        <Field name="cliente" type="hashmap" visibility="private"/>
+        <Field name="registro" type="HashMap" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods>
-        <Method name="agregarCliente" returnType="void" visibility="public">
+        <Method name="agregarCliente" returnType="boolean" visibility="public">
           <Argument type="Cliente" name="cliente"/>
+          <Argument type="String" name="tel"/>
         </Method>
         <Method name="buscarCliente" returnType="Cliente" visibility="public">
           <Argument type="String" name="numTelefono"/>
@@ -39,7 +61,7 @@
         <Method name="buscarClientes" returnType="Arraylist" visibility="public">
           <Argument type="String" name="ciudad"/>
         </Method>
-        <Method name="borrarCliente" returnType="void" visibility="public">
+        <Method name="borrarCliente" returnType="boolean" visibility="public">
           <Argument type="String" name="numTelefono"/>
         </Method>
       </Methods>
