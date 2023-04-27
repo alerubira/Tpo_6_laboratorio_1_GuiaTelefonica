@@ -13,7 +13,7 @@ El directorio telef√≥nico posee adem√°s las siguientes funcionalidades:
 
 public class Directorio {
     
-    private  HashMap<String,Cliente>mapClientes=new HashMap();
+    private  HashMap<String,Cliente> mapClientes=new HashMap<>();
 
     public Directorio() {
     }
@@ -23,9 +23,10 @@ public class Directorio {
     public void agreagarCliente(){
         
     }
-   /*‚ó? buscarTel√©fono() que en base a un apellido nos devuelve una lista con los nros de 
-   tel√©fono asociados a dicho apellido.*/ 
-    public void buscarTelefono(){
+   /*buscarTelÈfono() que en base a un apellido nos devuelve una lista con los nros de
+    telÈfono asociados a dicho apellido.*/ 
+    public void buscarTelefono(String apellido)
+    {
         
     }
     /*‚ó? buscarCliente() que en base al nro de tel√©fono retorna el Cliente asociado al 
